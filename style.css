@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    height: 100vh;
+    background-image: url("images\\bg-main-desktop.png");
+    background-size: 30%;
+    background-repeat: no-repeat;
+   
+}
+
+.container{
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: no-wrap;
+    /* min-width: 320px; */
+    width: 100%;
+}
+
+/* *************************cards*************************** */
+
+.cards{
+    width: 45%;
+    min-width: 200px;
+    height: 70vh;
+    min-height: 380px;
+    position: relative;
+}
+.front{
+    width: 360px;
+    height: 200px;
+    background-image: url("images/bg-card-front.png");
+    background-size: 100% 100%;
+    border-radius: 7px;
+    position: absolute;
+    left: 10%;
+    top: 10px;
+    box-shadow: 3px 3px 5px gray;
+    color: #fff;
+    text-align: center;
+    
+}
+
+.front img{
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+}
+
+.card-details{
+    position: relative;
+    display: inline-block;
+    margin-top: 35%;
+}
+
+.card-num{
+    width: 301px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.card-name{
+    font-size: 12px;
+    letter-spacing: 3px;
+    display: inline;
+    position: absolute;
+    left: 0;
+}
+
+.card-date{
+    font-size: 12px;
+    letter-spacing: 3px;
+    display: inline;
+    position: absolute;
+    right: 0;
+}
+
+.back{
+    width: 360px;
+    height: 200px;
+    background-image: url("images/bg-card-back.png");
+    background-size: 100% 100%;
+    border-radius: 7px;
+    object-fit: contain;
+    position: absolute;
+    right: 20%;
+    bottom: 10px;
+    z-index: -1;
+    box-shadow: 3px 3px 5px gray;
+}
+
+
+/* *************************Form*************************** */
+
+.form{
+    text-align: center;
+    width: 30%;
+    margin: 25px;
+    min-width: 355px;
+}
+
+.success{
+    text-align: center;
+}
+
+.success h3{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    
+}
+
+.success p{
+    margin-top: 0;
+    color: gray;
+}
+
+.btn{
+    margin-top: 20px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    width: 100%;
+    background-color: hsl(278, 68%, 11%);
+}
+
+label{
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input{
+    border: 1px solid gray;
+    border-radius: 7px;
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#name , #number{
+    width: 100%;
+}
+
+#mm , #yy{
+    width: 40%;
+   
+}
+
+#cvc{
+    width: 100%;
+}
+
+.backInf{
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: left;
+    justify-content: space-between;
+}
+
+form .btn{
+    margin-top: 0;
+}
+
+
+
+@media (max-width: 980px){
+    body{
+        background-size: 250% 40%;
+        background-image: url("images\\bg-main-mobile.png");
+        background-position: top;
+    }
+    
+    .container{
+       height: fit-content;
+       display: flex;
+       flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        max-width: 980px;
+    }
+
+    .cards{
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
+
+    .front{
+        top: 150px;
+    }
+
+    .back{
+        top: 50px;
+    }
+
+}
